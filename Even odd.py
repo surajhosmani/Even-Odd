@@ -1,20 +1,16 @@
 import sys
-
 if len(sys.argv) < 2:
-    print("Usage: python even_odd_count.py <numbers>")
-    sys.exit()
+    print("Usage: python even_odd_count.py <num1> <num2> <num3> ...")
+    sys.exit(1)
 
-# Convert all command-line arguments to integers
-numbers = [int(x) for x in sys.argv[1:]]
-
+numbers = [int(n) for n in sys.argv[1:]]
 even_count = 0
 odd_count = 0
-
-for n in numbers:
-    if n % 2 == 0:
+for num in numbers:
+    if num % 2 == 0:
         even_count += 1
     else:
         odd_count += 1
 
-print("Even Count:", even_count)
-print("Odd Count:", odd_count)
+print("Even Numbers Count:", even_count)
+print("Odd Numbers Count:", odd_count)
